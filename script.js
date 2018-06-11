@@ -1,20 +1,20 @@
 // image variables
 var imageArray;
-var backImage, boltImage, cloudImage, sunImage, moonImage, smileyImage, heartImage;
+var backImage, okImage, spaghetImage, knucklesImage, wizardImage, footFungusImage, lossImage;
 var transitionImage1, transitionImage2, transitionImage3;
 
 // animation variables
-var boltAnimation, cloudAnimation, sunAnimation, moonAnimation, smileyAnimation,
-heartAnimation;
+var okAnimation, spaghetAnimation, knucklesAnimation, wizardAnimation, footFungusAnimation,
+lossAnimation;
 
 // sprite variables
 var spriteArray;
-var boltSprite1, boltSprite2;
-var cloudSprite1, cloudSprite2;
-var sunSprite1, sunSprite2;
-var moonSprite1, moonSprite2;
-var smileySprite1, smileySprite2;
-var heartSprite1, heartSprite2;
+var okSprite1, okSprite2;
+var spaghetSprite1, spaghetSprite2;
+var knucklesSprite1, knucklesSprite2;
+var wizardSprite1, wizardSprite2;
+var footFungusSprite1, footFungusSprite2;
+var lossFungusSprite1, lossFungusSprite2;
 var spriteWidth, spriteHeight;
 var spriteX, spriteY;
 
@@ -44,12 +44,12 @@ var resetButton, musicButton;
  */
  function loadImages() {
    backImage = loadImage("assets/img/back.png");
-   boltImage = loadImage("assets/img/bolt.png");
-   cloudImage = loadImage("assets/img/cloud.png");
-   sunImage = loadImage("assets/img/sun.png");
-   moonImage = loadImage("assets/img/moon.png");
-   smileyImage = loadImage("assets/img/smiley.png");
-   heartImage = loadImage("assets/img/heart.png");
+   okImage = loadImage("assets/img/ok.png");
+   spaghetImage = loadImage("assets/img/spaghet.png");
+   knucklesImage = loadImage("assets/img/knuckles.png");
+   wizardImage = loadImage("assets/img/wizard.png");
+   footFungusImage = loadImage("assets/img/footFungus.png");
+   lossImage = loadImage("assets/img/loss.png");
    transitionImage1 = loadImage("assets/img/transition1.png");
    transitionImage2 = loadImage("assets/img/transition2.png");
    transitionImage3 = loadImage("assets/img/transition3.png");
@@ -68,12 +68,12 @@ var resetButton, musicButton;
    }
  */
 function loadAnimations() {
-  boltAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, boltImage);
-  cloudAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, cloudImage);
-  sunAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, sunImage);
-  moonAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, moonImage);
-  smileyAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, smileyImage);
-  heartAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, heartImage);
+  okAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, okImage);
+  spaghetAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, spaghetImage);
+  knucklesAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, knucklesImage);
+  wizardAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, wizardImage);
+  footFungusAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, footFungusImage);
+  lossAnimation = loadAnimation(backImage, transitionImage1, transitionImage2, transitionImage3, lossImage);
 }
 
 /*
@@ -113,13 +113,13 @@ function preload() {
    spriteHeight = 168;
    spriteX = 70;
    spriteY = 95;
-   imageArray = [backImage, boltImage, cloudImage, sunImage, moonImage, smileyImage, heartImage,
+   imageArray = [backImage, okImage, spaghetImage, knucklesImage, wizardImage, footFungusImage, lossImage,
                  transitionImage1, transitionImage2, transitionImage3];
    resizeImages();
    createSprites();
-   spriteArray = [boltSprite1, boltSprite2, cloudSprite1, cloudSprite2,
-     sunSprite1, sunSprite2, moonSprite1, moonSprite2, smileySprite1, smileySprite2,
-     heartSprite1, heartSprite2];
+   spriteArray = [okSprite1, okSprite2, spaghetSprite1, spaghetSprite2,
+     knucklesSprite1, knucklesSprite2, wizardSprite1, wizardSprite2, footFungusSprite1, footFungusSprite2,
+     lossSprite1, lossSprite2];
    addAnimations();
    shuffle(spriteArray, true);
    placeSprites();
@@ -175,7 +175,7 @@ function resizeImages() {
 
 /*
  * function createSprites()
- * Initializes each sprite variable (e.g., sunSprite1) as a sprite object
+ * Initializes each sprite variable (e.g., knucklesSprite1) as a sprite object
  * through the createSprite(x, y, width, height) p5.play method. For all sprites,
  * x and y parameters should be passed values 0 and 0 (sprites are actually placed
  * in a separate function), while width and height correspond to spriteWidth and
@@ -186,18 +186,18 @@ function resizeImages() {
    }
  */
  function createSprites() {
-   boltSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
-   boltSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
-   cloudSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
-   cloudSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
-   sunSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
-   sunSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
-   moonSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
-   moonSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
-   smileySprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
-   smileySprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
-   heartSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
-   heartSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
+   okSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
+   okSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
+   spaghetSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
+   spaghetSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
+   knucklesSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
+   knucklesSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
+   wizardSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
+   wizardSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
+   footFungusSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
+   footFungusSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
+   lossSprite1 = createSprite(0, 0, spriteWidth, spriteHeight);
+   lossSprite2 = createSprite(0, 0, spriteWidth, spriteHeight);
  }
 
 
@@ -211,10 +211,10 @@ function resizeImages() {
  */
  function addAnimations() {
    console.log("Did I even reach this part? Add aminations?");
-   var animations = [boltAnimation, boltAnimation, cloudAnimation, cloudAnimation,
-                    sunAnimation, sunAnimation, moonAnimation, moonAnimation,
-                    smileyAnimation, smileyAnimation,
-                    heartAnimation, heartAnimation];
+   var animations = [okAnimation, okAnimation, spaghetAnimation, spaghetAnimation,
+                    knucklesAnimation, knucklesAnimation, wizardAnimation, wizardAnimation,
+                    footFungusAnimation, footFungusAnimation,
+                    lossAnimation, lossAnimation];
    for(var i = 0; i < spriteArray.length; i++) {
      spriteArray[i].addAnimation("flip", animations[i]);
      spriteArray[i].animation.frameDelay = 10;
@@ -295,19 +295,19 @@ function resizeImages() {
  * reset and try again with a fresh shuffle.
  */
 function checkMatch(){
-  var boltMatch = (firstChoice === boltSprite1 && secondChoice === boltSprite2) ||
-                  (firstChoice === boltSprite2 && secondChoice === boltSprite1);
-  var cloudMatch = (firstChoice === cloudSprite1 && secondChoice === cloudSprite2) ||
-                  (firstChoice === cloudSprite2 && secondChoice === cloudSprite1);
-  var moonMatch =(firstChoice === moonSprite1 && secondChoice === moonSprite2) ||
-                  (firstChoice === moonSprite2 && secondChoice === moonSprite1);
-  var sunMatch = (firstChoice === sunSprite1 && secondChoice === sunSprite2) ||
-                (firstChoice === sunSprite2 && secondChoice === sunSprite1);
-  var smileyMatch = (firstChoice === smileySprite1 && secondChoice === smileySprite2)||
-                    (firstChoice === smileySprite2 && secondChoice === smileySprite1);
-  var heartMatch = (firstChoice === heartSprite1 && secondChoice === heartSprite2)||
-                  (firstChoice === heartSprite2 && secondChoice === heartSprite1);
-      if(boltMatch || heartMatch || cloudMatch || moonMatch || sunMatch || smileyMatch){
+  var okMatch = (firstChoice === okSprite1 && secondChoice === okSprite2) ||
+                  (firstChoice === okSprite2 && secondChoice === okSprite1);
+  var spaghetMatch = (firstChoice === spaghetSprite1 && secondChoice === spaghetSprite2) ||
+                  (firstChoice === spaghetSprite2 && secondChoice === spaghetSprite1);
+  var wizardMatch =(firstChoice === wizardSprite1 && secondChoice === wizardSprite2) ||
+                  (firstChoice === wizardSprite2 && secondChoice === wizardSprite1);
+  var knucklesMatch = (firstChoice === knucklesSprite1 && secondChoice === knucklesSprite2) ||
+                (firstChoice === knucklesSprite2 && secondChoice === knucklesSprite1);
+  var footFungusMatch = (firstChoice === footFungusSprite1 && secondChoice === footFungusSprite2)||
+                    (firstChoice === footFungusSprite2 && secondChoice === footFungusSprite1);
+  var lossMatch = (firstChoice === lossSprite1 && secondChoice === lossSprite2)||
+                  (firstChoice === lossSprite2 && secondChoice === lossSprite1);
+      if(okMatch || lossMatch || spaghetMatch || wizardMatch || knucklesMatch || footFungusMatch){
         matches++;
         if (matches === spriteArray.length / 2 ){
           alert("YOU LAUGH YOU LOSE!");
